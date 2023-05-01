@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">dewaalherdev</a>
+    <button class="navbar-toggler" type="button" (click)="toggleActive($event)">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{'show': isActive}">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <form class="d-flex">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+
+              <button
+                id="search-btn"
+                class="btn btn-outline-secondary"
+                type="submit"
+              >
+                <fa-icon [icon]="['fas', 'search']"></fa-icon>
+              </button>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
