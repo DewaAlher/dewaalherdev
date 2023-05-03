@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { POSTS } from '../post/post.data';
-import { Post } from '../post/post.model';
+import { POSTS } from '../../models/post.data';
+import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'app-home',

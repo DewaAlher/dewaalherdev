@@ -1,6 +1,7 @@
-import { TestBed, ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
-import { PostComponent } from './post.component';
+import { PostComponent } from '../src/app/pages/post/post.component';
+import { ComponentFixture } from '@angular/core/testing';
 import { expect } from 'chai';
 
 describe('PostComponent', () => {
@@ -17,10 +18,8 @@ describe('PostComponent', () => {
             snapshot: {
               paramMap: convertToParamMap({ id: '123' }),
             },
-            
           },
         },
-        
       ],
     }).compileComponents();
   });
@@ -32,6 +31,6 @@ describe('PostComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).to.be.ok;
+    expect(component).to.be.true;
   });
 });

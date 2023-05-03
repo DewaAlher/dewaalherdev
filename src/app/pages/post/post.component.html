@@ -1,6 +1,11 @@
-<div class="container my-4">
-  <div *ngIf="post">
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.content }}</p>
+<div class="container" *ngIf="post">
+  <div>
+    <h1>{{ post?.title }}</h1>
+    <p>{{ post?.summary }}</p>
+    <hr />
+    <div [innerHTML]="post?.content"></div>
   </div>
+  <ng-container *ngIf="!post">
+    <p>Postingan tidak ditemukan.</p>
+  </ng-container>
 </div>

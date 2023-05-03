@@ -1,21 +1,27 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { PortfolioComponent } from './pages/portfolio/portfolio.component';
-import { PostComponent } from './pages/post/post.component';
-import { PagesModule } from './pages/pages.module';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'portfolio', component: PortfolioComponent },
-  { path: 'post/:id', component: PostComponent },
-  { path: '**', redirectTo: '' },
-];
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { PagesModule } from './pages/pages.module';
+import {
+  FontAwesomeModule,
+  FaIconLibrary,
+} from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './footer/footer.component';
+
+const routes: Routes = [{ path: '', redirectTo: '/home', pathMatch: 'full' }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule, PagesModule],
+  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    PagesModule,
+    FontAwesomeModule,
+  ],
+  providers: [FaIconLibrary],
+  bootstrap: [AppComponent],
 })
-export class AppRoutingModule {}
+export class AppModule {}
