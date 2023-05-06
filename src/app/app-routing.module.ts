@@ -1,12 +1,27 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './pages/home/home.component';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { PagesModule } from './pages/pages.module';
+import {
+  FontAwesomeModule,
+  FaIconLibrary,
+} from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './footer/footer.component';
 
-const routes: Routes = [{ path: 'home', component: HomeComponent }];
+const routes: Routes = [{ path: '', redirectTo: '/home', pathMatch: 'full' }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    PagesModule,
+    FontAwesomeModule,
+  ],
+  providers: [FaIconLibrary],
+  bootstrap: [AppComponent],
 })
-export class AppRoutingModule {}
+export class AppModule {}
