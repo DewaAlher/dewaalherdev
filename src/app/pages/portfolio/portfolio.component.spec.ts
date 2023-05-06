@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { expect } from 'chai';
 import { PortfolioComponent } from './portfolio.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('PortofolioComponent', () => {
   let component: PortfolioComponent;
@@ -8,9 +9,9 @@ describe('PortofolioComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PortfolioComponent ]
-    })
-    .compileComponents();
+      declarations: [PortfolioComponent],
+      imports: [RouterTestingModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PortfolioComponent);
     component = fixture.componentInstance;
