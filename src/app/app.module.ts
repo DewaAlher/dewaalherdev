@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes, ActivatedRoute } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -21,7 +21,7 @@ const routes: Routes = [{ path: '', redirectTo: '/home', pathMatch: 'full' }];
     PagesModule,
     FontAwesomeModule,
   ],
-  providers: [FaIconLibrary,ActivatedRoute],
+  providers: [FaIconLibrary],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

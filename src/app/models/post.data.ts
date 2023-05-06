@@ -5,7 +5,7 @@ export const POSTS: Post[] = [
     id: 1,
     title: 'Contoh Posting 1',
     summary: 'Ini adalah contoh posting 1',
-    content: 'Isi dari contoh posting 1',
+    content: '',
   },
   {
     id: 2,

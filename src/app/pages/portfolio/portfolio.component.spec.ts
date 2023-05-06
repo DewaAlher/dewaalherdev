@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { expect } from 'chai';
 import { PortfolioComponent } from './portfolio.component';
 
 describe('PortofolioComponent', () => {
@@ -18,6 +18,6 @@ describe('PortofolioComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).to.be.ok;
   });
 });
