@@ -3,13 +3,14 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "typeRoots": ["node_modules/@types", "node_modules/expect/types"],
-    "types": []
+    "types": ["mocha", "node"],
+    "esModuleInterop": true
   },
   "include": [
     "src/**/*.d.ts",
     "src/**/*.ts",
     "!src/test.ts",
     "!src/**/*.spec.ts",
-    "src/app/pages/post/post.module.ts" 
+    "src/app/pages/post/post.module.ts"
   ]
 }
