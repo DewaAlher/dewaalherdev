@@ -1,49 +1,37 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-4">
-      <div class="list-group" id="list-tab" role="tablist">
+      <div class="list-group">
         <a
-          class="list-group-item list-group-item-action active"
-          id="list-privacy-policy-list"
-          data-toggle="list"
-          href="#list-privacy-policy"
-          role="tab"
-          aria-controls="privacy-policy"
+          routerLink="/legal"
+          fragment="privacy-content"
+          class="list-group-item list-group-item-action text-dark text-decoration-none"
           >Privacy Policy</a
         >
         <a
-          class="list-group-item list-group-item-action"
-          id="list-disclaimer-list"
-          data-toggle="list"
-          href="#list-disclaimer"
-          role="tab"
-          aria-controls="disclaimer"
+          routerLink="/legal"
+          fragment="disclaimer-content"
+          class="list-group-item list-group-item-action text-dark text-decoration-none"
           >Disclaimer</a
         >
         <a
-          class="list-group-item list-group-item-action"
-          id="list-terms-of-service-list"
-          data-toggle="list"
-          click="showTOS()"
+          routerLink="/legal"
+          fragment="tos-content"
+          class="list-group-item list-group-item-action text-dark text-decoration-none"
           >Terms of Service</a
         >
       </div>
     </div>
     <div class="col-md-8">
       <div class="tab-content" id="nav-tabContent">
-        <div
-          class="tab-pane fade show active"
-          id="list-privacy-policy"
-          role="tabpanel"
-          aria-labelledby="list-privacy-policy-list"
-        >
+        <div id="privacy-content">
           <h2>Privacy Policy</h2>
           <p>
             Your privacy is important to us. It is our policy to respect your
             privacy regarding any information we may collect from you across our
             website,
-            <a href="#">https://www.example.com</a>, and other sites we own and
-            operate.
+            <a href="#">https://www.dewaalherdev.com</a>, and other sites we own
+            and operate.
           </p>
 
           <h3>Information we collect</h3>
@@ -88,7 +76,7 @@
             disclose it.
           </p>
         </div>
-        <div>
+        <div id="disclaimer-content">
           <h2>Disclaimer</h2>
           <p>
             All the information on this website - www.example.com - is published
@@ -117,7 +105,7 @@
             or uploading any information.
           </p>
         </div>
-        <div>
+        <div id="tos-content">
           <h2>Terms of Service</h2>
           <p>
             These terms and conditions outline the rules and regulations for the
