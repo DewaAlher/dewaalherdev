@@ -9,9 +9,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PagesModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, SidebarComponent],
   imports: [BrowserModule, PagesModule, AppRoutingModule, FontAwesomeModule],
   providers: [FaIconLibrary],
   bootstrap: [AppComponent],

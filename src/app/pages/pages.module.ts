@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PostModule } from './post/post.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LegalComponent } from './legal/legal.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AboutComponent,
     PortfolioComponent,
     PageNotFoundComponent,
+    LegalComponent,
   ],
   imports: [CommonModule, PagesRoutingModule, PostModule],
 })
