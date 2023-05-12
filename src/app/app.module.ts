@@ -9,12 +9,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PagesModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
-
+import { FirebaseService } from './firebase.service';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [BrowserModule, PagesModule, AppRoutingModule, FontAwesomeModule],
-  providers: [FaIconLibrary],
+  providers: [FaIconLibrary,FirebaseService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
