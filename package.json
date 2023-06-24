@@ -23,6 +23,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "bootstrap": "^5.2.3",
+    "cosmicjs": "^4.3.7",
     "firebase": "^9.22.0",
     "jquery": "^3.6.4",
     "popper.js": "^1.16.1",

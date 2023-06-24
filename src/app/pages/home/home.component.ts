@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-import { POSTS } from '../../models/post.data';
-import { Post } from '../../models/post.model';
+import { CosmicService } from '../../services/cosmic.service';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +9,11 @@ import { Post } from '../../models/post.model';
 })
 export class HomeComponent implements OnInit {
   public greeting: string;
-  public posts: Post[] = POSTS;
+  public posts: any[] = [];
 
-  constructor(private router: Router) {this.greeting = '';}
+  constructor(private router: Router, private cosmicService: CosmicService) {
+    this.greeting = '';
+  }
 
   ngOnInit() {
     const hour = new Date().getHours();
@@ -25,9 +25,14 @@ export class HomeComponent implements OnInit {
     } else {
       this.greeting = 'Afternoon';
     }
+
+    // Ambil data post dari Cosmic JS
+    this.cosmicService.getPosts().then((response: any) => {
+      this.posts = response.objects;
+    });
   }
 
-  navigateToPost(title: string) {
-    this.router.navigate(['/post', { title: title }]);
+  navigateToPost(slug: string) {
+    this.router.navigate(['/post', { slug: slug }]);
   }
 }
